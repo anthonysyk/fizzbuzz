@@ -46,6 +46,12 @@ go build
 ./fizzbuzz
 ```
 
+### Docker
+
+```
+docker build -t fizzbuzz --pull . && docker run -it --rm fizzbuzz
+```
+
 ## Routes
 
 - `/health` retourne le statut du serveur
@@ -74,7 +80,6 @@ go build
 
 - Ajouter une infra pour le stockage du nombre de hits par requêtes
   - redis ou memorystore (GCP)
-- Ajouter un Dockerfile si nécessaire (déploiement d'une image)
 - Ajouter des variables d'environnement
 - Découper `api` si nécessaire (ajout de nouvelles features)
 
