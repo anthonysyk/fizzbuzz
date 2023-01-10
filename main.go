@@ -10,5 +10,5 @@ import (
 func main() {
 	st := store.NewMemoryStore()
 	router := api.GetRouter(st)
-	log.Fatal(http.ListenAndServe(":8000", router))
+	log.Fatal(http.ListenAndServe(":8080", router))
 }

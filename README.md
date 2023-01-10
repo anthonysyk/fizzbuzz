@@ -21,13 +21,19 @@ Si le nombre n'est divisible ni par 3 ni par 5, alors le serveur retournera simp
 
 ## Déploiement
 
-### Lancer le serveur
+### Lancer le serveur en local
 
-```go run .```
+```make run```
+
+### Lancer le serveur avec Docker
+
+```
+make docker
+```
 
 ### Lancer les tests
 
-```go test ./...```
+```make test```
 
 ```
 ?       github.com/anthonysyk/fizzbuzz  [no test files]
@@ -42,21 +48,15 @@ ok      github.com/anthonysyk/fizzbuzz/test/load        2.234s
 ### Build et lancer en executable
 
 ```
-go build
+make build
 ./fizzbuzz
-```
-
-### Docker
-
-```
-docker build -t fizzbuzz --pull . && docker run -it --rm fizzbuzz
 ```
 
 ## Routes
 
 - `/health` retourne le statut du serveur
 - `/fizzbuzz` retourne le résultat du service fizzbuzz
-- `/stats/data` retourne des données aggrégées sur l'utilisation du endpoint `/fizzbuzz` comme la requête la plus fréquence
+- `/stats` retourne des données aggrégées sur l'utilisation du endpoint `/fizzbuzz` comme la requête la plus fréquence
 
 ## Structure
 ```
