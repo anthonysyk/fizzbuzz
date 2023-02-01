@@ -28,12 +28,14 @@ Si le nombre n'est divisible ni par 3 ni par 5, alors le serveur retournera simp
 ### Lancer le serveur avec Docker
 
 ```
-make docker
+make run-docker
 ```
 
 ### Lancer les tests
 
 ```make test```
+
+```make test-integration```
 
 ```
 ?       github.com/anthonysyk/fizzbuzz  [no test files]
